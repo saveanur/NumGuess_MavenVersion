@@ -35,6 +35,7 @@ public class NumGenServlet extends HttpServlet {
 
 
 
+
     public void service(HttpServletRequest request, HttpServletResponse response) {
 
 
@@ -79,7 +80,8 @@ public class NumGenServlet extends HttpServlet {
                 boolean success = nbl.determineGuess(iGuessNumber);
                 String hint = nbl.getHint();
                 int nrGuesses = nbl.getNumGuesses();
-                jsonResponse = "{\"keySuccess\":\"" + success + "\", \"keyHint\":\"" + hint + "\", \"keyNrGuesses\":\"" + nrGuesses + "\"}";
+                double diff = nbl.getDiff();
+                jsonResponse = "{\"keySuccess\":\"" + success + "\", \"keyDiff\":\""+ diff + "\" , \"keyHint\":\"" + hint + "\", \"keyNrGuesses\":\"" + nrGuesses + "\"}";
 
             } else {
                 jsonResponse = "{\"keyError\":\"WRONGNUMBERFORMAT\"}";

@@ -17,7 +17,12 @@ FastTrackIT 2015
 public class NumGeneratorBusinessLogic {
 
 
-
+    private long starT;
+    private long stopT;
+    private double diff;
+    public double getDiff(){
+        return  diff;
+    }
     private static final int MAX_NUMBER = 10;
 
     private boolean isFirstTime = true;
@@ -50,6 +55,7 @@ public class NumGeneratorBusinessLogic {
         isFirstTime = true;
         numberOfGuesses = 0;
         hint = "";
+
     }
 
     public boolean determineGuess(int guessNumber){
@@ -57,11 +63,22 @@ public class NumGeneratorBusinessLogic {
             generatedNumber = NumGenerator.generate(MAX_NUMBER);
             System.out.println("gennr:"+generatedNumber);
             isFirstTime = false;
+
+            starT = System.currentTimeMillis();
+            System.out.println("am pornit la:"+ starT);
         }
         numberOfGuesses++;
         if (guessNumber == generatedNumber) {
             hint="";
             successfulGuess = true;
+
+           long stopT = System.currentTimeMillis();
+            System.out.println("am oprit la:"+ stopT);
+
+            diff = (stopT-starT)/1000.0;
+
+            System.out.println("Am ghicit la:" + diff);
+
         } else if (guessNumber < generatedNumber) {
             hint = "higher";
             successfulGuess = false;
@@ -70,6 +87,8 @@ public class NumGeneratorBusinessLogic {
             successfulGuess = false;
         }
         return successfulGuess;
+
+
     }
 
 }
