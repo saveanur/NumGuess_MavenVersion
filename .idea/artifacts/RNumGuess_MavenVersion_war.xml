@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="RNumGuess_MavenVersion:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="NumGuess.war">
+      <element id="artifact" artifact-name="RNumGuess_MavenVersion:war exploded" />
+    </root>
+  </artifact>
+</component>

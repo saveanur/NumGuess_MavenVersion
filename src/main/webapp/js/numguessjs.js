@@ -41,7 +41,7 @@
                 var keySuccess = jSonMessage.keySuccess;
                  var keyHint = jSonMessage.keyHint;
                  var keyNrGuesses = jSonMessage.keyNrGuesses;
-                 var R = jSonMessage.keyDiff;
+                 var R = jSonMessage.keyDiff; // am adaugat variabila pentru care se face legatura intre diff si jSON
 
                  if(keySuccess=="false") {
                      if (keyHint == "higher")
@@ -52,8 +52,8 @@
                  else
                  if(keySuccess=="true")
                  {
-                     document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + document.getElementById("number").value + " after " + keyNrGuesses + " guesses.";
-                     document.getElementById("time").innerHTML="You guessed after : " + R +" secounds";
+                    // document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + document.getElementById("number").value + " after " + keyNrGuesses + " guesses.";
+                     document.getElementById("time").innerHTML="Ai ghicit dupa : " + R/ +" secounde";
                  }
              }
          }

@@ -9,7 +9,7 @@ FastTrackIT 2015
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <title>app name</title>
       <meta charset="utf-8"/>
@@ -31,21 +31,25 @@ FastTrackIT 2015
           <p>Welcome to NumGuess 2017!</p>
       </div>
   </div>
-    <div id="navigation">
-      <a href="javascript:guessLink(1)">It could be 1</a></br>
-      <a href="javascript:guessLink(2)">It could be 2</a></br>
-      <a href="javascript:guessLink(3)">It could be 3</a></br>
-      <a href="javascript:guessLink(4)">It could be 4</a></br>
-      <a href="javascript:guessLink(5)">It could be 5</a></br>
-  </div>
+
+    <div  class="butoane">
+        <button id="button1" onclick="guessLink(1)">It could be 1</button></br>
+        <button id="button2" onclick="guessLink(2)">It could be 2</button></br>
+        <button id="button3" onclick="guessLink(3)">It could be 3</button></br>
+        <button id="button4" onclick="guessLink(4)">It could be 4</button></br>
+        <button id="button5" onclick="guessLink(5)">It could be 5</button></br>
+    </div>
+
+
   <div id="bodycontent">
       <div id="form">
           <label for="number">Number:&nbsp;</label><input type="number" id="number" style="width:30px"/>
-
+      </div>
           </br></br>
 
-          <input type="button" id="guessButton" value="Guess now" onClick="guess()"/>
-          <input type="button" id="resetButton" value="Reset" onClick="reset()"/>
+      <div id="functional">
+          <button id="guessButton"  onClick="guess()">Guess now</button></br>
+          <button id="resetButton"  onClick="reset()">Reset</button>
       </div>
 
   </div>
@@ -53,16 +57,15 @@ FastTrackIT 2015
   <div id="serverResponse"></div>
   <div id="time"></div>
 
-  <div id="postcontent">
-      <a href="javascript:guessLink(6)">It could be 6</a></br>
-      <a href="javascript:guessLink(7)">It could be 7</a></br>
-      <a href="javascript:guessLink(8)">It could be 8</a></br>
-      <a href="javascript:guessLink(9)">It could be 9</a></br>
-      <a href="javascript:guessLink(10)">It could be 10</a></br>
+  <div class="butoane2">
+      <button id="button6" onclick="guessLink(6)">It could be 6</button></br>
+      <button id="button7" onclick="guessLink(7)">It could be 7</button></br>
+      <button id="button8" onclick="guessLink(8)">It could be 8</button></br>
+      <button id="button9" onclick="guessLink(9)">It could be 9</button></br>
+      <button id="button10" onclick="guessLink(10)">It could be 10</button></br>
   </div>
 
-  <img src="http://www.clipartsmania.com/gif/numbers_gif/digital_number_one_green_animation_clipart.gif" alt="Imagine cu numere"
-      style=" position:relative ;top: 110px;float:right; width:128px; height:128px;">
+
 
   </body>
 </html>
